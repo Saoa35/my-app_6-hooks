@@ -3,10 +3,14 @@ import { useState } from "react";
 
 const StateHookEx = () => {
 
-  const [state, setState] = useState(0);
+  const [psi, setPsi] = useState(null);
+  
+  const [atm, setAtm] = useState(null);
 
   const handleClick = () => {
 
+    setPsi(psi + 1 * 14.6959);
+    setAtm(atm + 1);
   }
 
   return(
@@ -15,7 +19,7 @@ const StateHookEx = () => {
         <button onClick={handleClick}>
           Click
         </button>
-        <h4>{state}</h4>
+        <h4>Давление равно: {psi} psi</h4>
     </div>
   )
 }
