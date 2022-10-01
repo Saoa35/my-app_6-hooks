@@ -17,9 +17,9 @@ const StateHookEx = () => {
     <div>
         <h3>StateHookEx</h3>
         <button onClick={handleClick}>
-          Click
+          Convert
         </button>
-        <h4>Давление равно: {psi} psi</h4>
+        <h4>{atm} атмосфер будет равно: {psi} psi</h4>
     </div>
   )
 }
