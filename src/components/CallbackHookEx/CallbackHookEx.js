@@ -30,6 +30,7 @@ const CallbackHookEx = () => {
     return(
         <div>
             <h3>CallbackHookEx</h3>
+            <h4>{state2}</h4>
             <p>
             <button onClick={() => setState(state + 1)}>Click!</button>
             <button onClick={() => setState2(state2 + 1)}>Click 2!</button>
