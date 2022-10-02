@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 const ItemsList = ({getData}) => {
 
@@ -21,15 +21,19 @@ const CallbackHookEx = () => {
     const [state, setState] = useState(1);
     const [state2, setState2] = useState(1);
 
-    const getData = () => {
+    const getData = useCallback(() => {
         console.log('render!');
 
         return new Array(state).fill(null).map((_,idx) => `Element ${idx + 1}`);
-    }
+    }, [state]) 
 
     return(
         <div>
             <h3>CallbackHookEx</h3>
+            <p>
+            <button onClick={() => setState(state + 1)}>Click!</button>
+            <button onClick={() => setState2(state2 + 1)}>Click 2!</button>
+            </p>
             <ItemsList getData={getData}/>
         </div>
     )
