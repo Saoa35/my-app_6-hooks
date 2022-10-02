@@ -1,12 +1,14 @@
 // import EffectHookEx from '../EffectHookEx/EffectHookEx';
-import MemoHookEx from '../MemoHookEx/MemoHookEx';
+import CallbackHookEx from '../CallbackHookEx/CallbackHookEx';
+// import MemoHookEx from '../MemoHookEx/MemoHookEx';
 // import StateHookEx from '../StateHookEx/StateHookEx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <MemoHookEx/>
+      <CallbackHookEx/>
+      {/* <MemoHookEx/> */}
       {/* <StateHookEx/> */}
       {/* <EffectHookEx/> */}
     </div>
